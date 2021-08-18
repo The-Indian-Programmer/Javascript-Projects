@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Ubuntu", sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: #000;
+  position: relative;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  align-items: center;
+  position: sticky;
+  color: white;
+  top: 0;
+  transition: all 0.9s;
+}
+header .header_left {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_left .toggle_button {
+  display: none;
+}
+
+header .header_left .logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-left: 20px;
+}
+header .header_right {
+  flex: auto;
+}
+header .header_right ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header .header_right ul li {
+  list-style: none;
+  text-decoration: none;
+  padding: 20px 25px;
+  cursor: pointer;
+}
+header .header_right ul li:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+header .header_right ul li a {
+  text-decoration: none;
+  color: unset;
+  font-weight: bold;
+}
+.app_body {
+  position: relative;
+  top: -40px;
+  z-index: -1;
+  opacity: 0.7;
+  width: 100%;
+  height: 600px;
+}
+.app_body .image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.text_container {
+  width: 80%;
+  color: white;
+  margin: auto;
+}
+.text_container .intro_text {
+  font-size: 2rem;
+  font-family: "Ubuntu", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  margin-bottom: 10px;
+}
+.text_container .text {
+  font-size: 1rem;
+  font-family: "Ubuntu", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+/* header tootgle  */
+header.toggle {
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    height: 60px;
+    overflow: hidden;
+  }
+  header .header_left {
+    width: 100%;
+    padding: 10px;
+  }
+  header .header_right {
+    width: 100%;
+  }
+  .header_left .toggle_button {
+    display: block;
+    cursor: pointer;
+    padding: 3px;
+    font-size: 1.5rem;
+  }
+  .header_right ul {
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+  }
+  header .header_right ul li {
+    padding: 10px 0px;
+    width: 100%;
+    margin: 0%;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 0.8rem;
+  }
+}
