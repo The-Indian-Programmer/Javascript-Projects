@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  cursor: url("image//aim.png"), pointer;
+}
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url("image/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: url("image//aim.png"), pointer;
+}
+.bullet {
+  position: absolute;
+  background-image: url("image/hole.png");
+  height: 50px;
+  width: 50px;
+  z-index: 2;
+  pointer-events: none;
+  transform: translate(28px, 28px);
+}
